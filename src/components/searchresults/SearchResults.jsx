@@ -1,8 +1,23 @@
-import React from 'react'
+import React from 'react';
+import Tracklist from '../tracklist/Tracklist';
+import './SearchResults.css';
 
-function SearchResults() {
+
+
+function SearchResults({searchResults, onAdd}) {   // check the param passed in is called 'searchResults'
   return (
-    <div>SearchResults</div>
+    // Start Point (React Fragment)
+    <>
+      <div className = 'SearchResults'>
+        <h2>Result</h2>
+        <Tracklist 
+        searchResults = {searchResults}
+        onAdd = {onAdd} 
+        onRemoval = {false}
+        /> 
+      </div>
+    </>
+    // End Point (React Fragment)
   )
 }
 
